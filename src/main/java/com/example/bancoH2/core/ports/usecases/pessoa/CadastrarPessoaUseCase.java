@@ -10,14 +10,14 @@ import java.time.LocalDateTime;
 @Component
 public class CadastrarPessoaUseCase{
 
-    private final PessoaPort pessoaPort;
+    private final PessoaPort PessoaPort;
 
-    public CadastrarPessoaUseCase(PessoaPort pessoaPort) {
-        this.pessoaPort = pessoaPort;
+    public CadastrarPessoaUseCase(PessoaPort PessoaPort) {
+        this.PessoaPort = PessoaPort;
     }
 
     public Pessoa CadastrarPessoa(Pessoa pessoaModel){
         pessoaModel.setCreateAt(LocalDateTime.now());
-        return pessoaPort.CadastrarPessoa(pessoaModel);
+        return PessoaPort.CadastrarPessoa(pessoaModel);
     }
 }
